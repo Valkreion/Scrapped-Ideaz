@@ -1,0 +1,36 @@
+local adResponses = function()--Sourced from https://github.com/Valkreion/Valkreion/blob/main/Valkreion
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local playersList = {}
+for _, player in pairs(Players:GetPlayers()) do
+    if player ~= LocalPlayer then
+        table.insert(playersList, player)
+    end
+end
+
+local randomPlayer = playersList[math.random(1, #playersList)]
+
+        local ligma = game.Players.LocalPlayer.Name
+        local valkk = "Valkreion"
+        
+        local adResponses = { --Customize these if you want
+            randomPlayer.Name.." 💖",
+            randomPlayer.Name.."iz my new bae",
+            randomPlayer.Name.."i$ a nn",
+            randomPlayer.Name.."Why you playing nn$ m3et up!?",
+            "thug line spam 😴",
+            "flanker.co sux -xRohan",
+            "Sluggerizbad",
+            "Rorschannie 💖",
+            "xRohan 7229 💖",
+            "As we speak I am contacting my mom, she has alot of swag, so you better prepare for the yolo, n1",
+            randomPlayer.DisplayName.." / "randomplayer.Name.."Is cool ong"
+        }
+        while true do
+            local randomResponse = adResponses[math.random(#adResponses)]
+            local speak = game:GetService("ReplicatedStorage").Events.ChatMessage
+            speak:FireServer(randomResponse)
+            wait(3.8726652)
+ end
+ (adResponses)
