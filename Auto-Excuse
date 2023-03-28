@@ -1,0 +1,27 @@
+local speak = game:GetService("ReplicatedStorage").Events.ChatMessage
+
+local adResponses = {"tffff I was typing", "hax", "triggerbot", "🦍", "aimbot frfrfr", "ky5 💖", "auto-excuse:"} --Edit If you want 2 💖 -Valkreion
+
+local hasSpoken = false
+
+local function checkIfDead()
+    local player = game:GetService("Players").LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Dead") then
+        return player.Character.Dead.Value
+    end
+end
+
+local function speakMessage(message)
+    speak:FireServer(message)
+end
+
+while true do
+    if checkIfDead() and not hasSpoken then
+        local randomResponse = adResponses[math.random(#adResponses)]
+        speakMessage(randomResponse)
+        hasSpoken = true
+    elseif not checkIfDead() then
+        hasSpoken = false
+    end
+    wait()
+end
