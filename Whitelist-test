@@ -1,0 +1,44 @@
+-- Replace this with the name(s) you want to detect
+local NAMES_TO_DETECT = {"test", "example"}
+
+local Players = game:GetService("Players")
+
+local function checkPlayer(player)
+    for _, name in ipairs(NAMES_TO_DETECT) do
+        if player.Name == name then
+            print(name)
+            return true
+        end
+    end
+    return false
+end
+
+local foundName = false
+for _, player in ipairs(Players:GetPlayers()) do
+    if checkPlayer(player) then
+        foundName = true
+    end
+end
+
+Players.PlayerAdded:Connect(function(player)
+    if checkPlayer(player) then
+        foundName = true
+    end
+end)
+
+if foundName == true then 
+rconsoleprint("Whitelisted player found, serverhopping bae <3")
+    local x = {}
+for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+x[#x + 1] = v.id
+end
+end
+if #x > 0 then
+game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+else
+rconsoleprint("Server not found.")
+end
+else
+    print("NO WHITELISTED PLAYERS DETECTED")
+end
