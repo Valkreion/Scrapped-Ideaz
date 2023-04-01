@@ -1,6 +1,6 @@
 local speak = game:GetService("ReplicatedStorage").Events.ChatMessage
 
-local adResponses = {"tffff I was typing", "hax", "triggerbot", "🦍", "aimbot frfrfr", "ky5 💖", "auto-excuse:"} --Edit If you want 2 💖 -Valkreion
+local adResponses = {"Replace me!"} --Note: Edit this to the chatlines you want <3
 
 local hasSpoken = false
 
@@ -18,7 +18,7 @@ end
 while true do
     if checkIfDead() and not hasSpoken then
         local randomResponse = adResponses[math.random(#adResponses)]
-        speakMessage(randomResponse)
+        speakMessage()
         hasSpoken = true
     elseif not checkIfDead() then
         hasSpoken = false
