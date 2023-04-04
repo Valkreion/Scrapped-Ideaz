@@ -1,8 +1,13 @@
-if game.PlaceId == 11886555160 then --Made in 30 minutes, Used simple spy.
+
+if game.PlaceId == 11886555160 or 12987064108 then --Made in 30 minutes, Used simple spy.
+rconsolename("Troop-Fortification fucker")
+rconsoleprint("@@RED@@")
+rconsoleprint("Loaded\n")
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.InputBegan:Connect(function(input, processed)
     if input.KeyCode == Enum.KeyCode.F and not processed then
+rconsoleprint("@@RED@@")
 local Valkreion = { 
     [1] = "Gun",
     [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rocket Launcher"),
@@ -632,3 +637,5 @@ rconsoleprint("Not in game.PlaceId: 11886555160")
 end
 ValkWrongGameFunc()
 end
+
+print("Fuck ROLVe.");print("BROLVe ok thou :)");print("Made it kill the local player too, easier + basically anonymous with the `Who Killed You: Name` shit.")
