@@ -1,0 +1,634 @@
+if game.PlaceId == 11886555160 then --Made in 30 minutes, Used simple spy.
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, processed)
+    if input.KeyCode == Enum.KeyCode.F and not processed then
+local Valkreion = { 
+    [1] = "Gun",
+    [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rocket Launcher"),
+    [3] = {
+        ["IgnoreHumanoids"] = false,
+        ["LaserTrailConstantDamage"] = true,
+        ["PenetrationIgnoreDelay"] = math.huge,
+        ["CanSpinPart"] = false,
+        ["AngleX_Min"] = 1,
+        ["Lifesteal"] = 0,
+        ["MeleeCriticalDamageEnabled"] = false,
+        ["Spread"] = 5,
+        ["BulletShellType"] = "Normal",
+        ["ExplosionCraterFadeTime"] = 1,
+        ["Accuracy"] = 0.1,
+        ["GoreSoundVolume"] = 1,
+        ["MeleeHitEffectEnabled"] = true,
+        ["CustomMeleeHitEffect"] = false,
+        ["WhizDistance"] = 25,
+        ["Handles"] = {
+            [1] = "Handle"
+        },
+        ["ProjectileMotion"] = false,
+        ["HitmarkerFadeTimeHS"] = 0.4,
+        ["ReloadAnimationSpeed"] = 0.8,
+        ["MeleeDebuffChance"] = 100,
+        ["SpreadRedutionS"] = 0.6,
+        ["VisibleTime"] = 0.01,
+        ["MeleeHeadshotHitmarker"] = true,
+        ["DebuffName"] = "",
+        ["ScopeSwaySpeed"] = 15,
+        ["HoldingTime"] = 1,
+        ["HeatPerFireMax"] = 8,
+        ["LaserTrailDamageRate"] = 0.1,
+        ["MeleeBloodEnabled"] = true,
+        ["ApplyLaserTrailDebuffOnCritical"] = false,
+        ["MeleeKnockback"] = 0,
+        ["MeleeDamage"] = 20,
+        ["EquippedAnimationID"] = 12830506197,
+        ["RaycastHitboxData"] = {
+            [1] = CFrame.new(-1, 1, -1) * CFrame.Angles(-0, 0, -0),
+            [2] = CFrame.new(1, 1, -1) * CFrame.Angles(-0, 0, -0),
+            [3] = CFrame.new(-1, -1, -1) * CFrame.Angles(-0, 0, -0),
+            [4] = CFrame.new(1, -1, -1) * CFrame.Angles(-0, 0, -0),
+            [5] = CFrame.new(1, -1, 1) * CFrame.Angles(-0, 0, -0),
+            [6] = CFrame.new(-1, -1, 1) * CFrame.Angles(-0, 0, -0),
+            [7] = CFrame.new(-1, 1, 1) * CFrame.Angles(-0, 0, -0),
+            [8] = CFrame.new(1, 1, 1) * CFrame.Angles(-0, 0, -0)
+        },
+        ["MeleeBloodWoundTexture"] = {
+            [1] = 2078626
+        },
+        ["EasingStyleNAD"] = Enum.EasingStyle.Quint,
+        ["LockOnRadius"] = 10,
+        ["ScopeKnockbackMultiplier"] = 5,
+        ["BulletHoleVisibleTime"] = 3,
+        ["AltAnimationSpeed"] = 1,
+        ["AimIdleAnimationSpeed"] = 1,
+        ["MeleeHitSoundIDs"] = {
+            [1] = 6000828622
+        },
+        ["PreShotgunReload"] = true,
+        ["BulletPerBurst"] = 3,
+        ["VMEquippedAnimationID"] = 5474070948,
+        ["MeleeHitSoundPitchMin"] = 1,
+        ["BulletShellHitSoundPitchMax"] = 1,
+        ["AlignToAimPoint"] = true,
+        ["VMReloadAnimationSpeed"] = 1,
+        ["MaximumTargets"] = 3,
+        ["MarkerEffectEnabled"] = false,
+        ["MuzzleLightEnabled"] = true,
+        ["RecoilRedution"] = 0.5,
+        ["EasingStyle"] = Enum.EasingStyle.Quint,
+        ["MotionBlur"] = false,
+        ["BoltTransparency"] = 0,
+        ["BloodWoundFadeTime"] = 1,
+        ["MeleeLifesteal"] = 0,
+        ["MeleeDebuff"] = false,
+        ["LaserTrailColor"] = nil --[[Color3]],
+        ["ExplosionSoundIDs"] = {
+            [1] = 9209431384,
+            [2] = 9209435347
+        },
+        ["LaserTrailEnabled"] = false,
+        ["LaserBeamStartupAnimationSpeed"] = 1,
+        ["VMMeleeAttackAnimationSpeed"] = 1,
+        ["KeepAimingOnReloading"] = true,
+        ["ExplosionKnockbackMultiplierOnPlayer"] = 1,
+        ["DecayProjectile"] = false,
+        ["ShotgunPumpinSpeed"] = 0.5,
+        ["PenetrationType"] = "HumanoidPenetration",
+        ["LaserTrailFadeTime"] = 0.5,
+        ["HitmarkerSoundPitchHS"] = 1,
+        ["LowAmmo"] = true,
+        ["BulletShellRotVelocity"] = 40,
+        ["TimeBeforeScan"] = 0.5,
+        ["MeleeBloodWoundFadeTime"] = 1,
+        ["LaserColorCycleTime"] = 5,
+        ["VMFireAnimations"] = {
+            [1] = {
+                ["VMFireAnimationID"] = 5278901978,
+                ["VMFireAnimationSpeed"] = 1
+            }
+        },
+        ["LightBrightness"] = 4,
+        ["HitmarkerFadeTime"] = 0.4,
+        ["BlacklistParts"] = {
+            ["Part Name Here"] = true
+        },
+        ["CrossSpeed"] = 15,
+        ["SelfDamageRedution"] = 0.5,
+        ["MeleeHitSoundPitchMax"] = 1.5,
+        ["BulletHoleFadeTime"] = 1,
+        ["MaximumTime"] = 1,
+        ["MeleeHitSoundVolume"] = 1,
+        ["LaserTrailReflectance"] = 0,
+        ["LockOnScan"] = false,
+        ["ChargingTime"] = 1,
+        ["HeadshotDamageMultiplier"] = 1,
+        ["DamageMultipliers"] = {
+            ["Head"] = 1
+        },
+        ["FireAnimations"] = {
+            [1] = {
+                ["FireAnimationSpeed"] = 1,
+                ["FireAnimationID"] = 12830441767
+            }
+        },
+        ["MeleeHitCharSndPitchMax"] = 1,
+        ["SelfKnockback"] = false,
+        ["VMInspectAnimationSpeed"] = 1,
+        ["LaserTrailScaleMultiplier"] = 1.5,
+        ["CrossScaleIS"] = 0.6,
+        ["MaxAmmo"] = 20,
+        ["BoltShape"] = "Block",
+        ["IronsightEnabled"] = false,
+        ["EquippedAnimationSpeed"] = 1,
+        ["CrossSize"] = 7,
+        ["BoltVisibleTime"] = 1,
+        ["InspectAnimationSpeed"] = 1,
+        ["LaserTrailWidth"] = 0.5,
+        ["IdleAnimationID"] = 12830465712,
+        ["RecoilDamper"] = 0.65,
+        ["CameraRecoilingEnabled"] = false,
+        ["AngleX_Max"] = 1,
+        ["BulletShellHitSoundPitchMin"] = 1,
+        ["MeleeAttackEnabled"] = false,
+        ["AngleZ_Min"] = -1,
+        ["MeleeDebuffName"] = "",
+        ["HitEventOnTermination"] = true,
+        ["SniperEnabled"] = false,
+        ["LaserTrailTransparency"] = 0,
+        ["SpreadRedutionIS"] = 0.6,
+        ["WhizSoundIDs"] = {
+            [1] = 3809084884,
+            [2] = 3809085250,
+            [3] = 3809085650,
+            [4] = 3809085996,
+            [5] = 3809086455
+        },
+        ["AngleZ_Max"] = 1,
+        ["MinigunRevDownAnimationSpeed"] = 1,
+        ["SmokeTrailEnabled"] = false,
+        ["BulletSpeed"] = 100,
+        ["DebuffChance"] = 100,
+        ["FieldOfViewIS"] = 50,
+        ["ApplyMeleeDebuffOnCritical"] = false,
+        ["DistantSoundVolume"] = 1.5,
+        ["IdleAnimationSpeed"] = 1,
+        ["VMOverheatAnimationSpeed"] = 1,
+        ["ExplosionKnockbackPower"] = 50,
+        ["Lifetime"] = 20,
+        ["DamageableLaserTrail"] = false,
+        ["GoreSoundIDs"] = {
+            [1] = 1930359546
+        },
+        ["ShotgunReload"] = true,
+        ["VMReloadAnimationID"] = 5474084638,
+        ["RadomizeRotVelocity"] = true,
+        ["MouseSensitiveS"] = 0.2,
+        ["LaserBeamStartupDelay"] = 1,
+        ["BoltScaleMultiplier"] = 1.5,
+        ["GoreSoundPitchMin"] = 1,
+        ["SelfKnockbackPower"] = 50,
+        ["MeleeBloodWoundVisibleTime"] = 3,
+        ["ReduceSelfDamageOnAirOnly"] = true,
+        ["RandomizeBoltColorIn"] = "None",
+        ["VMMeleeAttackRange"] = 4,
+        ["HeatPerFireMin"] = 7,
+        ["BurstFireEnabled"] = false,
+        ["HoldDownEnabled"] = false,
+        ["MarkerPartColor"] = true,
+        ["LaserTrailCriticalDamageMultiplier"] = 3,
+        ["TimeBeforeCooldown"] = 3,
+        ["FullDamageDistance"] = 10,
+        ["BloodWoundTextureColor"] = nil --[[Color3]],
+        ["ViewmodelRecoilInfluence"] = 0.3,
+        ["BulletHoleEnabled"] = false,
+        ["TweenLengthNAD"] = 0.8,
+        ["LaserTrailCriticalDamageEnabled"] = false,
+        ["ReloadTime"] = 0,
+        ["CriticalBaseChance"] = 5,
+        ["VMIdleAnimationSpeed"] = 1,
+        ["DebrisProjectile"] = false,
+        ["HitCharSndPitchMin"] = 1,
+        ["LaserBeamLoopAnimationSpeed"] = 1,
+        ["ExplosionCraterPartColor"] = false,
+        ["BoltRadius"] = 5,
+        ["DelayBeforeFiring"] = 1,
+        ["CrossExpansion"] = 100,
+        ["HitmarkerSoundIDs"] = {
+            [1] = 3748776946,
+            [2] = 3748777642,
+            [3] = 3748780065
+        },
+        ["HitmarkerSoundPitch"] = 1,
+        ["BoltCount"] = 1,
+        ["DisappearTime"] = 5,
+        ["MeleeCanBreakGlass"] = true,
+        ["HitmarkerColorHS"] = nil --[[Color3]],
+        ["MeleeDamageMultipliers"] = {
+            ["Head"] = 2
+        },
+        ["VMShotgunPumpinAnimations"] = {
+            [1] = {
+                ["VMShotgunPumpinAnimationSpeed"] = 1
+            }
+        },
+        ["Auto"] = true,
+        ["CustomShotName"] = "Template",
+        ["VMLaserBeamLoopAnimationSpeed"] = 1,
+        ["ShotgunClipinAnimationSpeed"] = 1,
+        ["BulletHoleTexture"] = {
+            [1] = 2078626
+        },
+        ["ShellClipinSpeed"] = 0.8,
+        ["AimAnimationsEnabled"] = false,
+        ["Recoil"] = 25,
+        ["MeleeAttackRange"] = 4,
+        ["BoltMaterial"] = Enum.Material.Neon,
+        ["HitSoundPitchMin"] = 1,
+        ["LaserTrailDebuff"] = false,
+        ["BoltWideness"] = 5,
+        ["HitCharSndPitchMax"] = 1,
+        ["Range"] = 5000,
+        ["MaxHeat"] = 100,
+        ["SelectiveFireEnabled"] = false,
+        ["Debuff"] = false,
+        ["Ammo"] = 20,
+        ["SlopeAngle"] = 90,
+        ["CriticalDamageEnabled"] = false,
+        ["ExplosionRadius"] = 12,
+        ["BloodWoundTexture"] = {
+            [1] = 2078626
+        },
+        ["MinDepletion"] = 2,
+        ["ScopeKnockbackSpeed"] = 15,
+        ["BulletShellParticles"] = false,
+        ["InspectAnimationEnabled"] = false,
+        ["GoreSoundPitchMax"] = 1.5,
+        ["CycleHandles"] = false,
+        ["AnchorDebris"] = false,
+        ["BoltWidth"] = 0.5,
+        ["BurstRates"] = {
+            [1] = 0,
+            [2] = 0.075,
+            [3] = 0.075,
+            [4] = 0
+        },
+        ["ShotgunEnabled"] = false,
+        ["FireModeTexts"] = {
+            [1] = "SEMI-AUTO",
+            [2] = "2-ROUND-BURST",
+            [3] = "3-ROUND-BURST",
+            [4] = "AUTO"
+        },
+        ["BaseDamage"] = 69420,
+        ["HitEffectEnabled"] = true,
+        ["PreShotgunReloadSpeed"] = 0.3,
+        ["SpreadPattern"] = {
+            [1] = {
+                [1] = 0,
+                [2] = -0.4
+            },
+            [2] = {
+                [1] = -0.35,
+                [2] = 0.2
+            },
+            [3] = {
+                [1] = 0.35,
+                [2] = 0.2
+            },
+            [4] = {
+                [1] = 0,
+                [2] = 1
+            },
+            [5] = {
+                [1] = 0.95,
+                [2] = 0.31
+            },
+            [6] = {
+                [1] = 0.59,
+                [2] = -0.81
+            },
+            [7] = {
+                [1] = -0.59,
+                [2] = -0.81
+            },
+            [8] = {
+                [1] = -0.95,
+                [2] = 0.31
+            }
+        },
+        ["Homing"] = false,
+        ["VMChargingAnimationSpeed"] = 1,
+        ["HoldAndReleaseEnabled"] = false,
+        ["ExplosiveEnabled"] = true,
+        ["VMLaserBeamStopAnimationSpeed"] = 1,
+        ["Level1ChargingTime"] = 1,
+        ["VMTacticalReloadAnimationSpeed"] = 1,
+        ["VMMinigunRevDownAnimationSpeed"] = 1,
+        ["LightRange"] = 15,
+        ["BulletShellHitSoundVolume"] = 1,
+        ["CriticalDamageMultiplier"] = 3,
+        ["BurstRate"] = 0.075,
+        ["BloodWoundPartColor"] = true,
+        ["ExplosionSoundVolume"] = 1,
+        ["BulletBrightness"] = 400,
+        ["BatteryEnabled"] = false,
+        ["SpinZ"] = 0,
+        ["EasingDirection"] = Enum.EasingDirection.Out,
+        ["MouseSensitiveIS"] = 0.2,
+        ["Knockback"] = 5,
+        ["BulletPerShot"] = 8,
+        ["EasingDirectionNAD"] = Enum.EasingDirection.Out,
+        ["FullyGibbedLimbChance"] = 50,
+        ["ExplosionCraterEnabled"] = false,
+        ["SelfDamage"] = true,
+        ["ShotgunPump"] = false,
+        ["AltTime"] = 1,
+        ["CrossScaleS"] = 0,
+        ["MuzzleFlashEnabled"] = true,
+        ["ScanFrameWidth"] = 0.5,
+        ["BounceBetweenHumanoids"] = false,
+        ["MinigunEnabled"] = false,
+        ["BulletBloom"] = 0.005,
+        ["RandomizeLaserColorIn"] = "None",
+        ["AmmoPerMag"] = 4,
+        ["MeleeCriticalBaseChance"] = 5,
+        ["BloodWoundVisibleTime"] = 3,
+        ["WhizSoundVolume"] = 1,
+        ["MarkerEffectSize"] = 0.5,
+        ["VMAltAnimationSpeed"] = 1,
+        ["ScopeSensitive"] = 0.25,
+        ["DamageBasedOnDistance"] = true,
+        ["TravelType"] = "Distance",
+        ["MeleeBloodWoundSize"] = 0.5,
+        ["LaserTrailDebuffChance"] = 100,
+        ["ChargingAnimationSpeed"] = 1,
+        ["HitCharSndVolume"] = 1,
+        ["LaserBeam"] = false,
+        ["MarkerEffectFadeTime"] = 1,
+        ["HitCharSndIDs"] = {
+            [1] = 3802437008,
+            [2] = 3802437361,
+            [3] = 3802437696,
+            [4] = 3802440043,
+            [5] = 3802440388,
+            [6] = 3802442962
+        },
+        ["MeleeCriticalDamageMultiplier"] = 3,
+        ["MeleeAttackAnimationSpeed"] = 1,
+        ["HeadshotHitmarker"] = false,
+        ["ExplosionCraterSize"] = 3,
+        ["ExplosionCraterTexture"] = {
+            [1] = 53875997
+        },
+        ["ZeroDamageDistance"] = 300,
+        ["AngleY_Max"] = 0,
+        ["BulletSize"] = 0.4,
+        ["PenetrationAmount"] = 0,
+        ["ProjectileType"] = "Rocket",
+        ["PreShotgunReloadAnimationSpeed"] = 1.3,
+        ["VMHoldDownAnimationSpeed"] = 0.5,
+        ["FireRate"] = 0.8,
+        ["ModuleName"] = "1",
+        ["VMSwitchAnimationSpeed"] = 1,
+        ["CrossDamper"] = 0.8,
+        ["Acceleration"] = Vector3.new(0, 0, 0),
+        ["LightningBoltEnabled"] = false,
+        ["StopBouncingOn"] = "None",
+        ["ExplosionSoundPitchMax"] = 1,
+        ["BoltHeight"] = 0.5,
+        ["LightColor"] = nil --[[Color3]],
+        ["AnimationKeyframes"] = {},
+        ["ScaleLaserTrail"] = false,
+        ["ExplosionKnockbackMultiplierOnTarget"] = 2,
+        ["ScanRate"] = 0.5,
+        ["FireRates"] = {
+            [1] = 0.125,
+            [2] = 0.5,
+            [3] = 0.5,
+            [4] = 0.1
+        },
+        ["MeleeHitCharSndIDs"] = {
+            [1] = 6398015798,
+            [2] = 6398016125,
+            [3] = 6398016391,
+            [4] = 6398016618
+        },
+        ["BounceElasticity"] = 1,
+        ["SpinX"] = 3,
+        ["ChargingSoundPitchRange"] = {
+            [1] = 1,
+            [2] = 1.5
+        },
+        ["OnMeleeHitEventName"] = "None",
+        ["LockOnScanBurstRate"] = 0.1,
+        ["CollideDebris"] = true,
+        ["SuperRicochet"] = false,
+        ["SpinY"] = 0,
+        ["LaserTrailCriticalBaseChance"] = 5,
+        ["LaserTrailShape"] = "Block",
+        ["VMEquippedAnimationSpeed"] = 1,
+        ["SwitchAnimationSpeed"] = 1,
+        ["VelocityInfluence"] = true,
+        ["ScopeDelay"] = 0,
+        ["MaximumRate"] = 4,
+        ["CooldownRate"] = 1,
+        ["PartColor"] = true,
+        ["BounceDebris"] = true,
+        ["MeleeBloodWoundTextureColor"] = nil --[[Color3]],
+        ["OverheatAnimationSpeed"] = 1,
+        ["TacticalReloadTime"] = 3,
+        ["BounceVelocity"] = 30,
+        ["SmokeTrailRateIncrement"] = 1,
+        ["AllowCollide"] = false,
+        ["HitSoundIDs"] = {
+            [1] = 186809061,
+            [2] = 186809249,
+            [3] = 186809250,
+            [4] = 186809252
+        },
+        ["ExplosionCraterVisibleTime"] = 3,
+        ["ExplosionKnockback"] = true,
+        ["HitSoundVolume"] = 1,
+        ["LaserBeamStopDelay"] = 1,
+        ["VMLaserBeamStartupAnimationSpeed"] = 1,
+        ["RaisePitch"] = false,
+        ["LaserTrailDamage"] = 20,
+        ["WhizSoundEnabled"] = true,
+        ["FireModes"] = {
+            [1] = 1,
+            [2] = 2,
+            [3] = 3,
+            [4] = true
+        },
+        ["DisableDebrisContents"] = {
+            ["Trail"] = false,
+            ["Beam"] = false,
+            ["Particle"] = false,
+            ["Sound"] = false,
+            ["Light"] = false
+        },
+        ["ApplyDebuffOnCritical"] = false,
+        ["MaxDepletion"] = 4,
+        ["CooldownTime"] = 0.05,
+        ["TurnRatePerSecond"] = 1,
+        ["TacticalReloadAnimationEnabled"] = false,
+        ["MeleeHitCharSndVolume"] = 1,
+        ["HomingDistance"] = 250,
+        ["CollideDecay"] = true,
+        ["LockOnOnHovering"] = false,
+        ["RaycastHitbox"] = false,
+        ["ScaleBolt"] = false,
+        ["RaycastHitboxAnchorPoint"] = CFrame.new(0, 0, 0) * CFrame.Angles(-0, 0, -0),
+        ["FieldOfViewS"] = 12.5,
+        ["AdvancedChargingTime"] = 5,
+        ["ExplosionSoundEnabled"] = true,
+        ["BoltColor"] = nil --[[Color3]],
+        ["BulletShellEnabled"] = true,
+        ["OnLaserHitEventName"] = "None",
+        ["LaserTrailDebuffName"] = "",
+        ["BulletShellHitSoundEnabled"] = true,
+        ["BounceDelay"] = 1,
+        ["ShotgunPattern"] = false,
+        ["TacticalReloadAnimationSpeed"] = 1,
+        ["BloodEnabled"] = true,
+        ["GoreEffectEnabled"] = false,
+        ["DamageDropOffEnabled"] = true,
+        ["BulletType"] = "Normal",
+        ["ScopeKnockbackDamper"] = 0.65,
+        ["VMPreShotgunReloadAnimationSpeed"] = 1,
+        ["WhizSoundPitchMax"] = 1,
+        ["DelayAfterFiring"] = 1,
+        ["ChargingAnimationEnabled"] = false,
+        ["NoExplosionWhileBouncing"] = false,
+        ["MinigunRevUpAnimationSpeed"] = 1,
+        ["MeleeBloodWoundPartColor"] = true,
+        ["PreShotgunReloadAnimationID"] = 12828831947,
+        ["VMMinigunRevUpAnimationSpeed"] = 1,
+        ["ChargedShotEnabled"] = false,
+        ["BulletShellHitSoundIDs"] = {
+            [1] = 3909012115
+        },
+        ["ChargedShotAdvanceEnabled"] = false,
+        ["AmmoCost"] = 1,
+        ["OverheatTime"] = 2.5,
+        ["VMAnimationKeyframes"] = {},
+        ["MarkerEffectVisibleTime"] = 3,
+        ["MeleeBloodWoundEnabled"] = true,
+        ["ExplosionSoundPitchMin"] = 1,
+        ["HomeThroughWall"] = false,
+        ["BoltFadeTime"] = 0.5,
+        ["HitmarkerEnabled"] = false,
+        ["CustomHitEffect"] = false,
+        ["NormalizeDebris"] = false,
+        ["ShootType"] = "Projectile",
+        ["ShotsForDepletion"] = 12,
+        ["BulletShellVelocity"] = 17,
+        ["RecoilSpeed"] = 15,
+        ["LightShadows"] = true,
+        ["HitmarkerColor"] = nil --[[Color3]],
+        ["MarkerEffectTexture"] = {
+            [1] = 2078626
+        },
+        ["LookAtInput"] = false,
+        ["BulletHoleSize"] = 0.5,
+        ["PenetrationDepth"] = 0,
+        ["LaserBeamRange"] = 100,
+        ["FriendlyFire"] = false,
+        ["IgnoreSlope"] = false,
+        ["EquipTime"] = 0,
+        ["PredictDirection"] = false,
+        ["AngleY_Min"] = 0,
+        ["Level2ChargingTime"] = 2,
+        ["DistantSoundIds"] = {
+            [1] = 177174605
+        },
+        ["LaserTrailMaterial"] = Enum.Material.Neon,
+        ["LockOnDistance"] = 100,
+        ["BoltReflectance"] = 0,
+        ["HitSoundPitchMax"] = 1.5,
+        ["BulletParticle"] = false,
+        ["BounceHeight"] = 50,
+        ["ReloadAnimationID"] = 12828981212,
+        ["RicochetAmount"] = 0,
+        ["LaserTrailVisibleTime"] = 1,
+        ["LimitedAmmoEnabled"] = true,
+        ["ScopeSwayDamper"] = 0.65,
+        ["TweenLength"] = 0.8,
+        ["SelfKnockbackRedution"] = 0.8,
+        ["ExtraRayUpdater"] = "Template",
+        ["CustomExplosion"] = true,
+        ["UpdateRayInExtra"] = false,
+        ["CanBreakGlass"] = true,
+        ["FrictionConstant"] = 0,
+        ["LaserBeamStopAnimationSpeed"] = 1,
+        ["LaserTrailKnockback"] = 0,
+        ["BloodWoundSize"] = 0.5,
+        ["LaserTrailHeight"] = 0.5,
+        ["ChargingSoundIncreasePitch"] = true,
+        ["ChargeAlterTable"] = {},
+        ["SilenceEffect"] = false,
+        ["SelfKnockbackMultiplier"] = 2,
+        ["AimChargingAnimationSpeed"] = 1,
+        ["ShotgunPumpinAnimations"] = {
+            [1] = {
+                ["ShotgunPumpinAnimationSpeed"] = 1
+            }
+        },
+        ["BloodWoundEnabled"] = false,
+        ["DecayVelocity"] = 30,
+        ["MeleeHitCharSndPitchMin"] = 1,
+        ["WhizSoundPitchMin"] = 1,
+        ["OnHitEventName"] = "None",
+        ["ShotgunClipinAnimationID"] = 12828889398,
+        ["VMShotgunClipinAnimationSpeed"] = 1,
+        ["BulletShellDelay"] = 0,
+        ["ScanFrameHeight"] = 0.5,
+        ["AnchorDecay"] = false,
+        ["HoldDownAnimationSpeed"] = 0.5,
+        ["EchoEffect"] = true,
+        ["AimFireAnimations"] = {
+            [1] = {
+                ["AimFireAnimationSpeed"] = 1
+            }
+        },
+        ["IgnoreBlacklistedParts"] = true,
+        ["LaserTrailLifesteal"] = 0,
+        ["SwitchTime"] = 0.25
+    },
+    [7] = Vector3.new(0.9999999403953552, 1.5000003576278687, 1.0000001192092896),
+    [8] = {
+        ["ChargeLevel"] = 0,
+        ["ExplosionEffectFolder"] = game:GetService("ReplicatedStorage").Miscs.GunVisualEffects.Common.ExplosionEffect,
+        ["MuzzleFolder"] = game:GetService("ReplicatedStorage").Miscs.GunVisualEffects.Common.MuzzleEffect,
+        ["BloodEffectFolder"] = game:GetService("ReplicatedStorage").Miscs.GunVisualEffects.Common.BloodEffect,
+        ["GoreEffect"] = game:GetService("ReplicatedStorage").Miscs.GunVisualEffects.Common.GoreEffect,
+        ["HitEffectFolder"] = game:GetService("ReplicatedStorage").Miscs.GunVisualEffects.Common.HitEffect
+    },
+    [9] = 2.79817533493042
+}
+
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+    local rootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    local rightLowerLeg = player.Character and player.Character:FindFirstChild("RightLowerLeg")
+    
+    if humanoid and rootPart and rightLowerLeg then
+        Valkreion[4] = humanoid
+        Valkreion[5] = rootPart
+        Valkreion[6] = rightLowerLeg
+        game:GetService("ReplicatedStorage").Remotes.InflictTarget:InvokeServer(unpack(Valkreion))
+    end
+end
+
+    end
+end)
+else
+ValkWrongGameFunc = function()
+rconsoleclear()
+rconsoleprint("@@RED@@")
+rconsoleprint("Not in game.PlaceId: 11886555160")
+end
+ValkWrongGameFunc()
+end
